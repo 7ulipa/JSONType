@@ -1,0 +1,6 @@
+framework module JSONType {
+  umbrella header "JSONType-umbrella.h"
+
+  export *
+  module * { export * }
+}

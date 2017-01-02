@@ -1,0 +1,22 @@
+{
+  "name": "JSONType",
+  "version": "0.1.0",
+  "summary": "A short description of JSONType.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/JSONType",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DirGoTii": "darwin.jxzang@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/JSONType.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JSONType/Classes/**/*"
+}
