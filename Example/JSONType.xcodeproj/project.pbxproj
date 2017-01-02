@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6DF3894730C10ED9E4C335FC /* Pods_JSONType_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310DB371675831F2C6C5740D /* Pods_JSONType_Example.framework */; };
+		C1307B0F1E1AC3160010EB2F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1307B0E1E1AC3160010EB2F /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		783CFD92AC8B0323CF2BE6A3 /* Pods-JSONType_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONType_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONType_Tests/Pods-JSONType_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A5C7627515DE7120EA17B251 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ACAA2C8D9CA5C1CF104E6AAB /* JSONType.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JSONType.podspec; path = ../JSONType.podspec; sourceTree = "<group>"; };
+		C1307B0C1E1AC1E30010EB2F /* ModelDescriptions.swift */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = ModelDescriptions.swift; sourceTree = "<group>"; };
+		C1307B0E1E1AC3160010EB2F /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CA77F01477094A35EDAE8FEC /* Pods-JSONType_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONType_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONType_Example/Pods-JSONType_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D44004E67A7A1A24163391E4 /* Pods-JSONType_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONType_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONType_Tests/Pods-JSONType_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +88,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C1307B0C1E1AC1E30010EB2F /* ModelDescriptions.swift */,
+				C1307B0E1E1AC3160010EB2F /* Models.swift */,
 			);
 			name = "Example for JSONType";
 			path = JSONType;
@@ -125,6 +130,7 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "JSONType_Example" */;
 			buildPhases = (
 				EFC05E245AB3D3E36BFD092C /* [CP] Check Pods Manifest.lock */,
+				C1307B0B1E1AC1540010EB2F /* ShellScript */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -203,6 +209,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONType_Example/Pods-JSONType_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C1307B0B1E1AC1540010EB2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "$(PROJECT_DIR)/$(PROJECT_NAME)/JSONTypeGenerator -i $(PROJECT_DIR)/$(PROJECT_NAME)/ModelDescriptions.swift -o $(PROJECT_DIR)/$(PROJECT_NAME)/Models.swift";
+			shellScript = "";
+		};
 		EFC05E245AB3D3E36BFD092C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1307B0F1E1AC3160010EB2F /* Models.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
