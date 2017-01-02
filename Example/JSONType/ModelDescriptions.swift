@@ -1,10 +1,11 @@
 struct A {
-    let name: String < a_name
-    let id: Int < a_id
-    let b: B
+    let name: String ~ a_name
+    let id: Int ~ a_id
+    let b: Array<B>
 }
 
 struct B {
-    let name: String < b_name
-    let id: Int < b_id
+    let name: String ~ b_name
+    let id: Int ~ b_id
 }
+

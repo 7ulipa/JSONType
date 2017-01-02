@@ -3,12 +3,12 @@ import JSONType
 struct A: JSONType {
 	let name: String?
 	let id: Int?
-	let b: B?
+	let b: Array<B>?
 
 	init?(rawValue: Any?) {
 		name = String.pick(from: rawValue, with: "a_name")
 		id = Int.pick(from: rawValue, with: "a_id")
-		b = B.pick(from: rawValue, with: "b")
+		b = Array<B>.pick(from: rawValue, with: "b")
 	}
 }
 
